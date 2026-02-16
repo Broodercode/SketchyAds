@@ -43,7 +43,7 @@ export default function Navbar({ scrollToSection }) {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            className="lg:hidden bg-white border-4 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+            className="lg:hidden bg-white border-4 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus-visible:outline-lime-400"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -56,7 +56,7 @@ export default function Navbar({ scrollToSection }) {
             <button
               key={item}
               onClick={() => handleNav(item.toLowerCase())}
-              className="text-white text-5xl font-display font-extrabold uppercase hover:text-yellow-300 italic transform -rotate-2 hover:rotate-2 transition-transform"
+              className="text-white text-5xl font-display font-extrabold uppercase hover:text-lime-400 italic transform -rotate-2 hover:rotate-2 transition-transform focus-visible:outline-lime-400"
             >
               {item}
             </button>

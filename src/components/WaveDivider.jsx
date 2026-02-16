@@ -1,7 +1,8 @@
-export default function WaveDivider({ color = '#ffffff', flip = false }) {
+export default function WaveDivider({ color = '#ffffff', flip = false, bgColor }) {
   return (
     <div
       className={`w-full overflow-hidden leading-[0] ${flip ? 'rotate-180' : ''}`}
+      style={bgColor ? { backgroundColor: bgColor } : undefined}
       aria-hidden="true"
     >
       <svg

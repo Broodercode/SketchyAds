@@ -27,14 +27,14 @@ export default function Vibe() {
               </p>
               <div className="mt-8 flex gap-2">
                 <div className="w-4 h-4 rounded-full bg-red-500 border-2 border-black"></div>
-                <div className="w-4 h-4 rounded-full bg-yellow-500 border-2 border-black"></div>
+                <div className="w-4 h-4 rounded-full bg-lime-500 border-2 border-black"></div>
                 <div className="w-4 h-4 rounded-full bg-green-500 border-2 border-black"></div>
               </div>
             </div>
           </div>
 
           <div className="space-y-8">
-            <div ref={card1Ref} className="reveal bg-yellow-300 border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 hover:rotate-1 transition-transform cursor-crosshair">
+            <div ref={card1Ref} className="reveal bg-lime-400 border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 hover:rotate-1 transition-transform cursor-crosshair">
               <h4 className="font-display font-extrabold text-2xl uppercase mb-2 flex items-center gap-2">
                 <Video className="w-8 h-8" /> Short Form King
               </h4>

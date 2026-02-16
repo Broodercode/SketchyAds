@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 
-export default function useScrollReveal(options = {}) {
+const DEFAULT_OPTIONS = {};
+
+export default function useScrollReveal(options = DEFAULT_OPTIONS) {
   const ref = useRef(null);
 
   useEffect(() => {

@@ -11,7 +11,7 @@ export default function Hero({ scrollToSection }) {
       <div className="absolute bottom-20 left-[-100px] w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10 text-center lg:text-left">
-        <div className="inline-block bg-black text-white px-4 py-2 font-bold transform -rotate-3 mb-6 border-2 border-white shadow-[4px_4px_0px_0px_rgba(147,51,234,1)]">
+        <div className="inline-block bg-black text-white px-4 py-2 font-bold mb-6 border-2 border-white shadow-[4px_4px_0px_0px_rgba(147,51,234,1)] animate-wiggle">
           Warning: Contains Comedy
         </div>
 
@@ -30,7 +30,7 @@ export default function Hero({ scrollToSection }) {
         <div ref={ctaRef} className="reveal reveal-delay-1">
           <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
             <button onClick={() => scrollToSection('contact')} className="bg-pink-500 text-black border-4 border-black px-8 py-4 font-display font-extrabold text-xl uppercase tracking-wider shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all flex items-center justify-center gap-3">
-              <Zap size={28} className="fill-yellow-300 stroke-black" />
+              <Zap size={28} className="fill-lime-400 stroke-black" />
               Wake Them Up
             </button>
             <button onClick={() => scrollToSection('services')} className="bg-white text-black border-4 border-black px-8 py-4 font-display font-extrabold text-xl uppercase tracking-wider shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:bg-slate-100 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all">

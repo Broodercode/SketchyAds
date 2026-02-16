@@ -51,7 +51,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-28 px-4 bg-yellow-300 relative overflow-hidden">
+    <section id="contact" className="py-28 px-4 bg-lime-400 relative overflow-hidden">
       <div ref={sectionRef} className="reveal max-w-4xl mx-auto relative z-10">
         <div className="bg-black p-8 md:p-16 border-4 border-white shadow-[20px_20px_0px_0px_rgba(147,51,234,1)] transform -rotate-1 relative overflow-hidden">
           <div className="absolute inset-0 pattern-dots pointer-events-none"></div>
@@ -59,7 +59,7 @@ export default function ContactForm() {
           <div className="relative z-10">
             <div className="text-center mb-12">
               <h2 className="text-5xl md:text-7xl font-display font-extrabold text-white mb-6 uppercase">Let&apos;s Get Weird</h2>
-              <p className="text-xl text-yellow-300 font-bold max-w-lg mx-auto">
+              <p className="text-xl text-lime-400 font-bold max-w-lg mx-auto">
                 Tell me about your business. I&apos;ll tell you a joke about it. If you laugh, we work together.
               </p>
             </div>
@@ -67,9 +67,10 @@ export default function ContactForm() {
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="group">
-                  <label className="block text-white font-display font-bold uppercase mb-2 group-hover:text-yellow-300 transition-colors">Who are you?</label>
+                  <label htmlFor="contact-name" className="block text-white font-display font-bold uppercase mb-2 group-hover:text-lime-400 group-focus-within:text-lime-400 transition-colors">Who are you?</label>
                   <input
                     type="text"
+                    id="contact-name"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
@@ -79,9 +80,10 @@ export default function ContactForm() {
                   />
                 </div>
                 <div className="group">
-                  <label className="block text-white font-display font-bold uppercase mb-2 group-hover:text-yellow-300 transition-colors">What do you sell?</label>
+                  <label htmlFor="contact-business" className="block text-white font-display font-bold uppercase mb-2 group-hover:text-lime-400 group-focus-within:text-lime-400 transition-colors">What do you sell?</label>
                   <input
                     type="text"
+                    id="contact-business"
                     name="business"
                     value={formData.business}
                     onChange={handleInputChange}
@@ -93,9 +95,10 @@ export default function ContactForm() {
               </div>
 
               <div className="group">
-                <label className="block text-white font-display font-bold uppercase mb-2 group-hover:text-yellow-300 transition-colors">Where can I reach you?</label>
+                <label htmlFor="contact-email" className="block text-white font-display font-bold uppercase mb-2 group-hover:text-lime-400 group-focus-within:text-lime-400 transition-colors">Where can I reach you?</label>
                 <input
                   type="email"
+                  id="contact-email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}

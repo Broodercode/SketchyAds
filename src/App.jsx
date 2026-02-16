@@ -17,7 +17,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-yellow-300 font-body text-black selection:bg-black selection:text-yellow-300 overflow-x-hidden">
+    <div className="min-h-screen bg-lime-400 font-body text-black selection:bg-black selection:text-lime-400 overflow-x-hidden">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-white focus:border-4 focus:border-black focus:p-3 focus:font-bold"
@@ -29,14 +29,15 @@ export default function App() {
 
       <main id="main-content">
         <Hero scrollToSection={scrollToSection} />
-        <WaveDivider color="#000000" />
+        <WaveDivider color="#000000" bgColor="#a3e635" />
         <MarqueeDivider />
-        <WaveDivider color="#ffffff" />
+        <WaveDivider color="#ffffff" bgColor="#000000" />
         <Vibe />
-        <WaveDivider color="#7e22ce" />
+        <WaveDivider color="#7e22ce" bgColor="#ffffff" />
         <Services />
-        <WaveDivider color="#facc15" />
+        <WaveDivider color="#a3e635" bgColor="#7e22ce" />
         <ContactForm />
+        <WaveDivider color="#000000" bgColor="#a3e635" />
       </main>
 
       <Footer scrollToSection={scrollToSection} />
