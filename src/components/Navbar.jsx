@@ -51,7 +51,7 @@ export default function Navbar({ scrollToSection }) {
       </nav>
 
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-purple-600 z-40 flex flex-col justify-center items-center space-y-8">
+        <div className="fixed inset-0 bg-purple-600 z-40 flex flex-col justify-center items-center space-y-8 animate-menu-fade-in">
           {['Vibe', 'Services', 'Contact'].map((item) => (
             <button
               key={item}

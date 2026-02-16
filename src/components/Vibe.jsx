@@ -1,8 +1,13 @@
 import { Video, Mic2, MapPin } from 'lucide-react';
+import useScrollReveal from '../hooks/useScrollReveal';
 
 export default function Vibe() {
+  const card1Ref = useScrollReveal();
+  const card2Ref = useScrollReveal();
+  const card3Ref = useScrollReveal();
+
   return (
-    <section id="vibe" className="py-24 px-4 bg-white pattern-grid-lg text-black">
+    <section id="vibe" className="py-28 px-4 bg-white pattern-grid-lg text-black">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -29,21 +34,21 @@ export default function Vibe() {
           </div>
 
           <div className="space-y-8">
-            <div className="bg-yellow-300 border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 hover:rotate-1 transition-transform cursor-crosshair">
+            <div ref={card1Ref} className="reveal bg-yellow-300 border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 hover:rotate-1 transition-transform cursor-crosshair">
               <h4 className="font-display font-extrabold text-2xl uppercase mb-2 flex items-center gap-2">
                 <Video className="w-8 h-8" /> Short Form King
               </h4>
               <p className="font-medium">The world has the attention span of a goldfish. I make 15-second masterpieces that fit right into YouTube Shorts and Google feeds.</p>
             </div>
 
-            <div className="bg-pink-400 border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1 hover:-rotate-1 transition-transform cursor-crosshair">
+            <div ref={card2Ref} className="reveal reveal-delay-1 bg-pink-400 border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1 hover:-rotate-1 transition-transform cursor-crosshair">
               <h4 className="font-display font-extrabold text-2xl uppercase mb-2 flex items-center gap-2">
                 <Mic2 className="w-8 h-8" /> Pro Voice Talent
               </h4>
               <p className="font-medium">I&apos;m solo, but I&apos;m not alone. I contract professional voice actors who sound like they belong in a Marvel trailer.</p>
             </div>
 
-            <div className="bg-blue-400 border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 hover:rotate-1 transition-transform cursor-crosshair">
+            <div ref={card3Ref} className="reveal reveal-delay-2 bg-purple-300 border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 hover:rotate-1 transition-transform cursor-crosshair">
               <h4 className="font-display font-extrabold text-2xl uppercase mb-2 flex items-center gap-2">
                 <MapPin className="w-8 h-8" /> Hyper-Local
               </h4>

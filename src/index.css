@@ -2,12 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
 @layer utilities {
   .pause {
     animation-play-state: paused;
   }
 }
 
+/* Scroll reveal animations */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.15s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.45s;
+}
+
+/* Mobile menu animation */
+@keyframes menu-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-menu-fade-in {
+  animation: menu-fade-in 0.3s ease-out forwards;
+}
+
+/* Blob animation */
 @keyframes blob {
   0% { transform: translate(0px, 0px) scale(1); }
   33% { transform: translate(30px, -50px) scale(1.1); }
@@ -23,6 +90,7 @@
   animation-delay: 2s;
 }
 
+/* Marquee animation */
 @keyframes marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
@@ -32,7 +100,14 @@
   animation: marquee 20s linear infinite;
 }
 
+/* Grid pattern */
 .pattern-grid-lg {
   background-image: radial-gradient(#000 2px, transparent 2px);
   background-size: 30px 30px;
+}
+
+/* Dot pattern for contact form */
+.pattern-dots {
+  background-image: radial-gradient(rgba(147, 51, 234, 0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
 }

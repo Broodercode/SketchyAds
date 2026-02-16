@@ -5,6 +5,8 @@ import Vibe from './components/Vibe';
 import Services from './components/Services';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import WaveDivider from './components/WaveDivider';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   const scrollToSection = (id) => {
@@ -15,7 +17,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-yellow-300 font-sans text-black selection:bg-black selection:text-yellow-300 overflow-x-hidden">
+    <div className="min-h-screen bg-yellow-300 font-body text-black selection:bg-black selection:text-yellow-300 overflow-x-hidden">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-white focus:border-4 focus:border-black focus:p-3 focus:font-bold"
@@ -27,13 +29,18 @@ export default function App() {
 
       <main id="main-content">
         <Hero scrollToSection={scrollToSection} />
+        <WaveDivider color="#000000" />
         <MarqueeDivider />
+        <WaveDivider color="#ffffff" />
         <Vibe />
+        <WaveDivider color="#7e22ce" />
         <Services />
+        <WaveDivider color="#facc15" />
         <ContactForm />
       </main>
 
-      <Footer />
+      <Footer scrollToSection={scrollToSection} />
+      <ScrollToTop />
     </div>
   );
 }

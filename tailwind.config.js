@@ -10,6 +10,7 @@ export default {
     extend: {
       fontFamily: {
         display: ['"Space Grotesk"', ...defaultTheme.fontFamily.sans],
+        body: ['"Inter"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
