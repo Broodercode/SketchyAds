@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { 
   Play, 
   MapPin, 
@@ -14,7 +14,6 @@ import {
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [rotation, setRotation] = useState(0);
   const [formData, setFormData] = useState({ name: '', business: '', email: '' });
   const [formStatus, setFormStatus] = useState({ submitting: false, success: false, error: null });
 
@@ -41,7 +40,7 @@ export default function App() {
       });
 
       const result = await response.json();
-      
+
       if (result.success) {
         setFormStatus({ submitting: false, success: true, error: null });
         setFormData({ name: '', business: '', email: '' });
@@ -52,13 +51,6 @@ export default function App() {
       setFormStatus({ submitting: false, success: false, error: error.message });
     }
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRotation(prev => (prev === 2 ? -2 : 2));
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -155,8 +147,8 @@ export default function App() {
         {/* Floating Sticker Element */}
         <div className="hidden lg:block absolute right-20 top-1/3 transform rotate-12 bg-white p-4 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] max-w-xs text-center">
           <div className="bg-black text-white font-bold text-xs uppercase p-1 mb-2">My Guarantee</div>
-          <p className="font-black text-xl leading-none">"IF THEY DON'T LAUGH, I'LL EAT MY HAT."</p>
-          <div className="text-xs mt-2 text-gray-500">(Disclaimer: I don't wear hats)</div>
+          <p className="font-black text-xl leading-none">&quot;IF THEY DON&apos;T LAUGH, I&apos;LL EAT MY HAT.&quot;</p>
+          <div className="text-xs mt-2 text-gray-500">(Disclaimer: I don&apos;t wear hats)</div>
         </div>
       </section>
 
@@ -177,15 +169,15 @@ export default function App() {
               <div className="absolute inset-0 bg-black translate-x-4 translate-y-4 border-4 border-black"></div>
               <div className="absolute inset-0 bg-purple-600 translate-x-2 translate-y-2 border-4 border-black"></div>
               <div className="relative bg-white border-4 border-black p-8 md:p-12">
-                <h3 className="text-4xl font-black uppercase mb-6">The "Me" Factor</h3>
+                <h3 className="text-4xl font-black uppercase mb-6">The &quot;Me&quot; Factor</h3>
                 <p className="text-lg font-bold mb-4">
-                  Big agencies send you a 40-page PDF and charge you $5k for "strategy."
+                  Big agencies send you a 40-page PDF and charge you $5k for &quot;strategy.&quot;
                 </p>
                 <p className="text-lg mb-4">
                   I send you a script that makes you spit out your coffee.
                 </p>
                 <p className="text-lg font-bold">
-                  I'm a solo operator. I don't have overhead. I have a camera, a weird sense of humor, and a deep understanding of what makes locals click.
+                  I&apos;m a solo operator. I don&apos;t have overhead. I have a camera, a weird sense of humor, and a deep understanding of what makes locals click.
                 </p>
                 <div className="mt-8 flex gap-2">
                    <div className="w-4 h-4 rounded-full bg-red-500 border-2 border-black"></div>
@@ -207,14 +199,14 @@ export default function App() {
                 <h4 className="font-black text-2xl uppercase mb-2 flex items-center gap-2">
                   <Mic2 className="w-8 h-8" /> Pro Voice Talent
                 </h4>
-                <p className="font-medium">I'm solo, but I'm not alone. I contract professional voice actors who sound like they belong in a Marvel trailer.</p>
+                <p className="font-medium">I&apos;m solo, but I&apos;m not alone. I contract professional voice actors who sound like they belong in a Marvel trailer.</p>
               </div>
 
               <div className="bg-blue-400 border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 hover:rotate-1 transition-transform cursor-crosshair">
                 <h4 className="font-black text-2xl uppercase mb-2 flex items-center gap-2">
                   <MapPin className="w-8 h-8" /> Hyper-Local
                 </h4>
-                <p className="font-medium">We aren't targeting "America." We are targeting the 5-mile radius around your front door. Zero wasted spend.</p>
+                <p className="font-medium">We aren&apos;t targeting &quot;America.&quot; We are targeting the 5-mile radius around your front door. Zero wasted spend.</p>
               </div>
             </div>
 
@@ -256,9 +248,9 @@ export default function App() {
           <div className="bg-black p-8 md:p-16 border-4 border-white shadow-[20px_20px_0px_0px_rgba(147,51,234,1)] transform -rotate-1">
             
             <div className="text-center mb-12">
-              <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">Let's Get Weird</h2>
+              <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">Let&apos;s Get Weird</h2>
               <p className="text-xl text-yellow-300 font-bold max-w-lg mx-auto">
-                Tell me about your business. I'll tell you a joke about it. If you laugh, we work together.
+                Tell me about your business. I&apos;ll tell you a joke about it. If you laugh, we work together.
               </p>
             </div>
 
@@ -305,7 +297,7 @@ export default function App() {
 
               {formStatus.success && (
                 <div className="bg-green-500 border-4 border-white p-4 text-white font-black text-center uppercase">
-                  🎉 BOOM! Message sent! I'll be in touch soon.
+                  🎉 BOOM! Message sent! I&apos;ll be in touch soon.
                 </div>
               )}
 
